@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Manage Reports | TayabaStrack</title>
+  <link rel="stylesheet" href="css/adstyle.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="img/logo.png" alt="Logo" />
+        <span>TayabaStrack</span>
+      </div>
+      <hr class="divider" />
+      <nav>
+        <ul>
+          <li><a href="admin.html" class="nav-link">Dashboard</a></li>
+          <li><a href="manage.html" class="active">Manage Reports</a></li>
+          <li><a href="map.html" class="nav-link">Map</a></li>
+          <li><a href="#" class="nav-link">User Management</a></li>
+          <li><a href="#" class="nav-link">Report Bulletin</a></li>
+        </ul>
+      </nav>
+      <div class="user-info">
+        <p>Logged in as:<br /><strong>Ella Garcia</strong></p>
+        <span>Admin</span>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="dashboard">
+      <header class="dashboard-header">
+        <div class="menu-icon">&#9776;</div>
+        <h1>Manage Reports</h1>
+        <div class="admin-area">
+          <img src="img/bell.png" alt="Notifications" class="icon" />
+          <span>Admin</span>
+          <img src="img/admin-profile.jpg" class="profile-pic" alt="Admin Profile" />
+        </div>
+      </header>
+
+      <hr class="top-divider" />
+
+      <!-- Reports Table -->
+      <section class="report-section">
+        <div class="section-header">
+          <h2>Reports</h2>
+          <div class="search-bar">
+            <input type="text" id="searchReportInput" placeholder="Search Reports..." />
+            <button>🔍</button>
+          </div>
+        </div>
+        <div class="table-container">
+          <table class="report-table" id="reportTable">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Barangay</th>
+                <th>Phone No.</th>
+                <th>Issue</th>
+                <th>Location</th>
+                <th>Measurements</th>
+                <th>Image</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Liam Cruz</td>
+                <td>Baguio</td>
+                <td>09178425963</td>
+                <td>Pothole</td>
+                <td>14.0121869, 121.5844248</td>
+                <td>Depth: 12m<br>Width: 55cm</td>
+                <td><img src="images/pothole.jpg" alt="issue" /></td>
+                <td><span class="status pending">Pending</span></td>
+                <td><a href="#">Edit</a> | <a href="#">Delete</a></td>
+              </tr>
+              <tr>
+                <td>Mia Alonzo</td>
+                <td>Ipilan</td>
+                <td>09265589127</td>
+                <td>Streetlight</td>
+                <td>14.0170657, 121.5851823</td>
+                <td>Height: 12m</td>
+                <td><img src="images/streetlight.jpg" alt="issue" /></td>
+                <td><span class="status ongoing">Ongoing</span></td>
+                <td><a href="#">Edit</a> | <a href="#">Delete</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Completed Table -->
+      <section class="report-section">
+        <div class="section-header">
+          <h2>Completed</h2>
+          <div class="search-bar">
+            <input type="text" id="searchCompletedInput" placeholder="Search Completed..." />
+            <button>🔍</button>
+          </div>
+        </div>
+        <div class="table-container">
+          <table class="report-table" id="completedTable">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Barangay</th>
+                <th>Phone No.</th>
+                <th>Issue</th>
+                <th>Location</th>
+                <th>Measurements</th>
+                <th>Image</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Amelia Santiago</td>
+                <td>Dapdap</td>
+                <td>09086417395</td>
+                <td>Cracked Road</td>
+                <td>14.0154676, 121.5857156</td>
+                <td>Length: 40m</td>
+                <td><img src="images/cracked-road.jpg" alt="issue" /></td>
+                <td><span class="status completed">Completed</span></td>
+                <td><a href="#">Edit</a> | <a href="#">Delete</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/adscript.js"></script>
+</body>
+</html>

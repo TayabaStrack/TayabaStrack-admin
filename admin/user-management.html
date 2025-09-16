@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Management | TayabaStrack</title>
+  <link rel="stylesheet" href="css/adstyle.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+    <div class="logo">
+      <img src="img/logo.png" alt="Logo" />
+      <span>TayabaStrack</span>
+    </div>
+    <hr class="divider" />
+        <nav>
+          <ul>
+            <li><a href="admin.html" class="nav-link">Dashboard</a></li>
+            <li><a href="manage.html" class="nav-link">Manage Reports</a></li>
+            <li><a href="map.html" class="nav-link">Map</a></li>
+            <li><a href="user-management.html" class="active">User Management</a></li>
+            <li><a href="#" class="nav-link">Report Bulletin</a></li>
+          </ul>
+       </nav>
+      <div class="user-info">
+        <p>Logged in as:<br /><strong>Ella Garcia</strong></p>
+        <span>Admin</span>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="dashboard">
+      <header class="dashboard-header">
+        <div class="menu-icon">&#9776;</div>
+        <h1>Profile</h1>
+        <div class="admin-area">
+          <img src="img/bell.png" alt="Notifications" class="icon" />
+          <div class="profile-dropdown">
+            <img src="img/admin-profile.jpg" class="profile-pic" alt="Admin Profile" id="profileMenuBtn" />
+            <div class="dropdown-menu" id="dropdownMenu">
+              <a href="profile.html">Profile</a>
+              <a href="login.html">Log out</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <hr class="top-divider" />
+      
+      
+    <!-- Inside your existing Admin Dashboard layout -->
+    <section class="main">
+    <div class="main-top">
+        <h1>Pending Registration</h1>
+    </div>
+
+    <div class="main-body">
+        <div class="search-bar">
+        <input type="text" id="searchUserInput" placeholder="Search Brgy Official User">
+        </div>
+
+        <div class="table-container">
+        <table id="userTable">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Contact</th>
+                <th>Password</th>
+                <th>Position</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td data-label="Name">Joergie Gener</td>
+                <td data-label="Email">gagener@slsu.edu.ph</td>
+                <td data-label="Address">Baguio</td>
+                <td data-label="Contact">09065429497</td>
+                <td data-label="Password">•••••••</td>
+                <td data-label="Position">Brgy Official</td>
+                <td data-label="Status">Pending</td>
+                <td data-label="Action">
+                <button class="approve-btn">Approve</button>
+                <button class="decline-btn">Decline</button>
+                </td>
+            </tr>
+            <!-- Add more rows -->
+            </tbody>
+        </table>
+        </div>
+    </div>
+    </section>
+    </main>
+  </div>
+      <script src="adscript.js"></script>
+</body>
+</html>
+

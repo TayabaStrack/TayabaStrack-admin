@@ -1,0 +1,241 @@
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+:root {
+  --blue: #004aad;
+  --light: #f9f9f9;
+}
+
+/* ===== Wrapper ===== */
+.wrapper {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+/* ===== Left Side ===== */
+.left-side {
+  flex: 1;
+  background: var(--blue);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 40px;
+}
+
+.left-side .logo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid white;
+  margin-bottom: 20px;
+}
+
+.left-side h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.left-side p {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* ===== Right Side ===== */
+.right-side {
+  flex: 1; /* take up full half */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff; /* or keep blue if you prefer */
+  padding: 2rem;
+}
+
+/* Login Container */
+.login-container {
+  width: 100%;
+  max-width: 500px;   /* make it bigger than before */
+  padding: 3rem 2.5rem;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.login-container h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* ===== Toggle Buttons ===== */
+.toggle-btns {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.toggle {
+  flex: 1;
+  padding: 10px 0;
+  border: none;
+  background: #ddd;
+  color: #333;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+.toggle.active {
+  background: var(--blue);
+  color: white;
+}
+
+/* ===== Input Fields ===== */
+.input-group {
+  margin: 15px 0;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* ===== Login Button ===== */
+.login-btn {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.2rem;    /* bigger button */
+  border-radius: 8px;
+  background: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background: #0056b3;
+}
+
+/* ===== Forgot Password Modal ===== */
+.modal {
+  display: none; /* hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6); /* dark overlay */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal Box */
+.modal-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 14px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  text-align: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.modal-content p {
+  margin-bottom: 1rem;
+  color: #666;
+}
+
+/* Close Button */
+.close-btn {
+  float: right;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #666;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+
+/* Modal Inputs */
+.modal-content .input-group {
+  margin: 1rem 0;
+}
+
+/* Buttons Row */
+.btn-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem; /* space from inputs */
+  gap: 1rem;          /* space between Cancel & Submit */
+}
+
+.cancel-btn,
+.submit-btn {
+  flex: 1;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.cancel-btn {
+  background: #ddd;
+}
+
+.cancel-btn:hover {
+  background: #bbb;
+}
+
+.submit-btn {
+  background: #007bff;
+  color: white;
+}
+
+.submit-btn:hover {
+  background: #0056b3;
+}
+
+/* Small fade-in effect */
+@keyframes fadeIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.extra {
+  text-align: center;   /* centers the text inside */
+  margin-top: 1rem;     /* space above link */
+}
+
+.extra a {
+  color: #007bff;       /* match your theme */
+  font-size: 0.95rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.extra a:hover {
+  color: #0056b3;
+}

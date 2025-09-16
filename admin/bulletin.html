@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Report Bulletin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="img/logo.png" alt="Logo">
+        <span>TayabaStrack</span>
+      </div>
+      <hr class="divider">
+      <nav>
+        <ul>
+          <li><a href="admin.html">Home</a></li>
+          <li><a href="manage.html">Manage Reports</a></li>
+          <li><a href="map.html">Map</a></li>
+          <li><a href="users.html">User Management</a></li>
+          <li><a href="bulletin.html" class="active">Report Bulletin</a></li>
+        </ul>
+      </nav>
+      <div class="user-info">
+        Logged in as:<br><b>Ella Garcia</b><br>Admin
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="dashboard">
+      <header class="dashboard-header">
+        <div class="menu-icon">&#9776;</div>
+        <h1>Admin Dashboard</h1>
+        <div class="admin-area">
+          <img src="img/bell.png" alt="Notifications" class="icon" />
+          <span>Admin</span>
+          <div class="profile-wrapper">
+            <img src="img/admin-profile.jpg" id="profileMenuBtn" class="profile-pic" alt="Admin Profile">
+            <div class="dropdown-menu" id="dropdownMenu">
+              <a href="profile.html">Profile</a>
+              <a href="login.html">Log out</a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <hr class="top-divider">
+
+      <!-- Public Announcements -->
+      <div class="report-section">
+        <div class="section-header">
+          <h2>Public Announcements</h2>
+          <button onclick="openModal('postAnnouncementModal')" class="add-btn">+ New Announcement</button>
+        </div>
+
+        <div class="search-bar">
+          <input type="text" id="searchBulletin" placeholder="Search Reports">
+        </div>
+
+        <div id="bulletinTableContainer">
+          <table class="report-table" id="bulletinTable">
+            <thead>
+              <tr>
+                <th>Barangay</th>
+                <th>Issue</th>
+                <th>Location</th>
+                <th>Measurements</th>
+                <th>Images</th>
+                <th>Date</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Ipilian</td>
+                <td>Pipe Leak</td>
+                <td>14.07, 121.58</td>
+                <td>Length: 2m, Depth: 1.5m</td>
+                <td><img src="img/pipe.jpg" width="60"></td>
+                <td>12/10/25–12/13/25</td>
+                <td>
+                  <button class="edit-btn">Edit</button>
+                  <button class="delete-btn">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- ===== Post/Edit Announcement Modal ===== -->
+  <div class="modal" id="postAnnouncementModal">
+    <div class="modal-content">
+      <h2>Post Announcement</h2>
+      <form id="postAnnouncementForm">
+        <label>Barangay</label>
+        <input type="text" id="postBarangay" required>
+
+        <label>Issue</label>
+        <input type="text" id="postIssue" required>
+
+        <label>Measurements</label>
+        <input type="text" id="postMeasurements">
+
+        <label>Images</label>
+        <input type="file" multiple>
+
+        <label>Date</label>
+        <input type="text" id="postDate">
+
+        <div class="modal-actions">
+          <button type="button" onclick="closeModal('postAnnouncementModal')">Cancel</button>
+          <button type="submit">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

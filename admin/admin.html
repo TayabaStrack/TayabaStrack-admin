@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard | TayabaStrack</title>
+  <link rel="stylesheet" href="css/adstyle.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+    <div class="logo">
+      <img src="img/logo.png" alt="Logo" />
+      <span>TayabaStrack</span>
+    </div>
+    <hr class="divider" />
+        <nav>
+          <ul>
+            <li><a href="admin.html" class="active">Dashboard</a></li>
+            <li><a href="manage.html" class="nav-link">Manage Reports</a></li>
+            <li><a href="map.html" class="nav-link">Map</a></li>
+            <li><a href="user-management.html" class="nav-link">User Management</a></li>
+            <li><a href="#" class="nav-link">Report Bulletin</a></li>
+          </ul>
+       </nav>
+      <div class="user-info">
+        <p>Logged in as:<br /><strong>Ella Garcia</strong></p>
+        <span>Admin</span>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="dashboard">
+      <header class="dashboard-header">
+        <div class="menu-icon">&#9776;</div>
+        <h1>Profile</h1>
+        <div class="admin-area">
+          <img src="img/bell.png" alt="Notifications" class="icon" />
+          <div class="profile-dropdown">
+            <img src="img/admin-profile.jpg" class="profile-pic" alt="Admin Profile" id="profileMenuBtn" />
+            <div class="dropdown-menu" id="dropdownMenu">
+              <a href="profile.html">Profile</a>
+              <a href="login.html">Log out</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <hr class="top-divider" />
+      
+      <section class="stats">
+        <div class="stat-card">
+          <img src="img/tor.png" alt="Reports" />
+          <div>
+            <p>Total Reports</p>
+            <h2>35</h2>
+          </div>
+        </div>
+        <div class="stat-card">
+          <img src="img/pend.png" alt="Pending" />
+          <div>
+            <p>Pending</p>
+            <h2>15</h2>
+          </div>
+        </div>
+        <div class="stat-card">
+          <img src="img/ong.png" alt="Ongoing" />
+          <div>
+            <p>Ongoing</p>
+            <h2>20</h2>
+          </div>
+        </div>
+        <div class="stat-card">
+          <img src="img/comp.png" alt="Completed" />
+          <div>
+            <p>Completed</p>
+            <h2>24</h2>
+          </div>
+        </div>
+      </section>
+
+      <section class="report-map">
+        <div class="report-chart">
+          <h3>Total Reports</h3>
+          <canvas id="reportChart"></canvas>
+        </div>
+        <div class="map-preview">
+          <h3>Map</h3>
+          <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1Yxyz-EXAMPLE" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/adscript.js"></script>
+</body>
+</html>
